@@ -19,13 +19,13 @@ A TensorFlow Lite Micro library specifically designed for the AIduino board (STM
 | Anomaly Detection | Detect unusual patterns | Any sensor data |
 | Sine Wave Prediction | Basic ML demo | None (synthetic data) |
 
-## Hardware Requirements
+## Hardware 
 
-- **AIduino Board** (or any STM32F407VGT6-based board)
+- **AIduino Board** ( STM32F407VGT6-based board )
   - ARM Cortex-M4 @ 168MHz with FPU
   - 1MB Flash
   - 192KB SRAM + 64KB CCM
-- **Sensors** (for full functionality):
+- **Sensors** 
   - INMP441 Digital MEMS Microphone (I2S)
   - MPU6050 or LIS3DH Accelerometer (I2C)
   - RGB LED (for visual feedback)
@@ -224,27 +224,6 @@ AIduinoModel(size_t tensor_arena_size = 50*1024)
 | LED Green | PD13 | RGB LED Green |
 | LED Blue | PD14 | RGB LED Blue |
 
-## Troubleshooting
-
-### Common Issues
-
-**"Model schema version mismatch"**
-- Your model was created with a newer TensorFlow version
-- Re-export with compatible TFLite version (2.x recommended)
-
-**"AllocateTensors() failed"**
-- Increase `tensor_arena_size` in constructor
-- Use quantized model to reduce memory usage
-
-**"Invoke failed"**
-- Check that all required ops are registered
-- Verify input data format matches model expectations
-
-**Upload fails**
-- Ensure correct board/part number selected
-- Try holding BOOT0 button while pressing reset
-- Check USB cable and drivers
-
 ### Performance Tips
 
 1. **Use quantized models** - 4x smaller and faster
@@ -264,28 +243,9 @@ cd AIduino_TFLiteMicro
 # Just copy to your Arduino libraries folder
 ```
 
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
-## License
-
-Apache License 2.0 - See [LICENSE](LICENSE) file.
-
 ## References
 
 - [TensorFlow Lite Micro](https://www.tensorflow.org/lite/microcontrollers)
 - [TinyML Book](https://tinymlbook.com/)
 - [STM32F407 Reference Manual](https://www.st.com/resource/en/reference_manual/dm00031020.pdf)
 - [CMSIS-NN Documentation](https://arm-software.github.io/CMSIS_5/NN/html/index.html)
-
-## Support
-
-- **GitHub Issues**: For bug reports and feature requests
-- **Discussions**: For questions and community support
-
----
-
