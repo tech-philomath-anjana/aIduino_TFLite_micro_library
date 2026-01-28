@@ -289,4 +289,3 @@ Apache License 2.0 - See [LICENSE](LICENSE) file.
 
 ---
 
-*AIduino - Making Edge AI accessible for everyone*
