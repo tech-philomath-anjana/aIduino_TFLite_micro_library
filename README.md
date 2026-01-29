@@ -4,15 +4,11 @@
 
 **No external downloads needed!** Everything is included.
 
----
-
 ## Installation
 
 1. Extract zip to `Documents/Arduino/libraries/`
 2. Restart Arduino IDE
-3. Done!
-
----
+3. Done
 
 ## Usage
 
@@ -64,8 +60,6 @@ void loop() {
 }
 ```
 
----
-
 ## API
 
 | Function | Description |
@@ -78,8 +72,6 @@ void loop() {
 | `getOutputMaxIndex()` | Get predicted class |
 | `getOutputMaxValue()` | Get confidence |
 | `getInferenceTimeUs()` | Get timing |
-
----
 
 ## Supported Operations
 
@@ -97,18 +89,6 @@ void loop() {
 - Quantize, Dequantize
 - Mean
 
----
-
-## Troubleshooting
-
-**"Cannot allocate tensor"**  
-→ Increase arena size: `runtime.begin(model, 50*1024)`
-
-**Model not working**  
-→ Make sure your model only uses supported operations
-
----
-
 ## Files
 
 ```
@@ -122,4 +102,3 @@ AIduino_TFLM_Standalone/
     └── tflite_kernels.h   # Operation implementations
 ```
 
-All code is in header files - no compilation issues!
