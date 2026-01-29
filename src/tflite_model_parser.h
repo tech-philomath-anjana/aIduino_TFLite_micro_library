@@ -206,6 +206,13 @@ public:
   uint32_t getVersion() const { return version_; }
   size_t getNumSubgraphs() const { return numSubgraphs_; }
   size_t getNumBuffers() const { return numBuffers_; }
+
+  // Expose FlatBuffer reader helpers used by the runtime
+  // (runtime expects to query vector lengths and elements)
+  size_t vectorLength(const uint8_t* vec) const { return reader_->vectorLength(vec); }
+
+  template<typename T>
+  T vectorGet(const uint8_t* vec, size_t index) const { return reader_->vectorGet<T>(vec, index); }
   
   // Get subgraph
   const uint8_t* getSubgraph(size_t index) const {
