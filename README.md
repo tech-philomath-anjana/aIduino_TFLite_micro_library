@@ -2,7 +2,7 @@
 
 ## SELF-CONTAINED TensorFlow Lite Micro Runtime
 
-**No external downloads needed!** Everything is included.
+**No external downloads needed** Everything is included.
 
 ## Installation
 
