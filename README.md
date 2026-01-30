@@ -103,6 +103,8 @@ AIduino_TFLM_Standalone/
     └── tflite_kernels.h   # Operation implementations
 ```
 
+
+
 # AIduino TFLM SD Card
 
 ## TensorFlow Lite Micro with SD Card Model Loading
